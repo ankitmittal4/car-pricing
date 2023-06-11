@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Image Display</title>
+    <style>
+        #carImage {
+            width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Image Display</h1>
+    <label for="carPrice">Enter the price of the car:</label>
+    <input type="number" id="carPrice">
+    <button onclick="displayCarImage()">Display</button>
+    <div id="imageContainer"></div>
+
+    <script>
+        function displayCarImage() {
+            var carPrice = document.getElementById("carPrice").value;
+            var imageContainer = document.getElementById("imageContainer");
+
+            // Clear the image container
+            imageContainer.innerHTML = "";
+
+            if (carPrice >= 0 && carPrice <= 10000) {
+                var carImage = document.createElement("img");
+                carImage.src = "../image/alto.avif";
+                carImage.id = "carImage";
+                imageContainer.appendChild(carImage);
+            } else if (carPrice > 10000 && carPrice <= 50000) {
+                var carImage = document.createElement("img");
+                carImage.src = "../image/i20.webp";
+                carImage.id = "carImage";
+                imageContainer.appendChild(carImage);
+            } else if (carPrice > 50000) {
+                var carImage = document.createElement("img");
+                carImage.src = "../image/verna.webp";
+                carImage.id = "carImage";
+                imageContainer.appendChild(carImage);
+            } else {
+                var errorText = document.createElement("p");
+                errorText.innerText = "Invalid price. Please enter a valid price.";
+                imageContainer.appendChild(errorText);
+            }
+        }
+    </script>
+</body>
+</html>

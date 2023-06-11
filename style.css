@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+    /* background-color: black; */
+}
+h1{
+    /* margin: 0px auto; */
+}
+.container{
+    width: 300px;
+    margin: 20px auto;
+}
+#price{
+    
+}
+input[type="number"]{
+    margin: 25px auto;
+    margin-bottom: 0px;
+
+}
+button {
+    width: 100%;
+    padding: 7px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin: 20px auto;
+}
